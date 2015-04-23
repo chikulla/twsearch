@@ -16,7 +16,7 @@ class TweetSearch:
 
     def next(self):
         if self.cursor == "":
-            url = "https://twitter.com/search?q=" + \
+            url = "https://twitter.com/search?f=realtime&q=" + \
                   self.query + "&src=typd&lang=ja"
             resp = requests.get(url)
             self.soup = BeautifulSoup(resp.text.encode(resp.encoding))
